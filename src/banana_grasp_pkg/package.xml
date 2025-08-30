@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>banana_grasp_pkg</name>
+  <version>0.0.1</version>
+  <description>ROS package for banana contour and grasp direction</description>
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  <license>BSD</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend> 
+  <depend>message_filters</depend>
+  <depend>image_transport</depend> 
+  <depend>franka_gripper</depend>
+  <depend>geometry_msgs</depend>
+  <depend>actionlib</depend>
+  <depend>std_srvs</depend>
+  <depend>moveit_ros_planning_interface</depend> 
+  <depend>moveit_visual_tools</depend>
+  <depend>fltk</depend> 
+  <depend>opencv</depend> 
+  <depend>tf2</depend>
+  <depend>tf2_ros</depend>
+  <depend>moveit_core</depend> 
+  <depend>gazebo_msgs</depend>
+  <depend>gazebo_ros</depend>  
+</package>

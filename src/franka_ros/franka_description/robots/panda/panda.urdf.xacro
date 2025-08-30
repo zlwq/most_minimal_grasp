@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="panda">
+
+  <xacro:include filename="$(find franka_description)/robots/common/franka_robot.xacro"/>
+
+  <xacro:arg name="arm_id" default="panda" />
+
+  <xacro:franka_robot arm_id="$(arg arm_id)" joint_limits="${xacro.load_yaml('$(find franka_description)/robots/panda/joint_limits.yaml')}">
+  </xacro:franka_robot>
+
+  <xacro:include filename="$(find panda_demo)/urdf/d435i.xacro" />
+  <xacro:d435i />
+
+  <joint name="d435i_base_joint" type="fixed">
+    <parent link="panda_link0"/>
+    <child link="camera_base_link"/>
+    <origin xyz="0 0.61 1.2" rpy="0 1.57 1.57" />
+  </joint>
+  <!-- ========== table from model.sdf, as an obstacle for MoveIt ========== -->
+  <link name="table_link">
+    <!-- <visual>
+      <origin xyz="0 0.61 -1" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://panda_demo/urdf/table_marble/meshes/table_lightmap.dae" scale="0.25 0.25 0.25" />
+      </geometry>
+       <material name="Table/Marble_Lightmap">
+        <script>
+          <uri>package://panda_demo/urdf/table_marble/materials/scripts</uri>
+          <uri>package://panda_demo/urdf/table_marble/materials/textures</uri>
+          <name>Table/Marble_Lightmap</name>
+        </script>
+        <lighting>false</lighting>
+      </material>
+    </visual> -->
+    <visual>
+      <origin xyz="0 0.61 -1" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://panda_demo/urdf/table_marble/meshes/table_lightmap.dae" scale="0.25 0.25 0.25" />
+      </geometry>
+ 
+    </visual>
+
+    <collision>
+      <origin xyz="0 0.61 -1" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://panda_demo/urdf/table_marble/meshes/table_lightmap.dae" scale="0.25 0.25 0.25" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="table_fixed_to_base" type="fixed">
+    <parent link="panda_link0"/>
+    <child link="table_link"/>
+    <origin xyz="0 0 0.648" rpy="0 0 0"/>
+  </joint>
+
+</robot>
