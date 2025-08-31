@@ -24,7 +24,7 @@ git clone https://github.com/zlwq/most_minimal_grasp.git
 ```
 进入工作空间，然后编译：
 ```bash
-cd minimal_grasp
+cd most_minimal_grasp
 catkin_make
 ```
 在编译过程中，可能会因为缺少依赖而报错。
@@ -38,7 +38,7 @@ sudo apt install ros-melodic-<package-name>
 在 ~/.bashrc 中添加以下行，使 Gazebo 能找到自定义模型：
 
 ```bash
-export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/zlwq/minimal_grasp/src/panda_demo/urdf
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/zlwq/most_minimal_grasp/src/panda_demo/urdf
 ```
 保存后刷新：
 
@@ -49,7 +49,7 @@ source ~/.bashrc
 构建完成后，在 ~/.bashrc 或手动执行：
 
 ```bash
-source ~/minimal_grasp/devel/setup.bash
+source ~/most_minimal_grasp/devel/setup.bash
 ```
 ### 4、打开launch文件和对应的banana_grasp
 完成以上步骤后，即可在 Gazebo 中启动最小化 Panda 抓取环境，并基于此进行抓取复现。
