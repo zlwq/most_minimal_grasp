@@ -20,7 +20,7 @@
 ### 1. 编译工程
 建议在ubuntu18.04版本编译运行，在~文件夹（家目录）运行git命令下载此项目
 ```bash
-git clone https://github.com/zlwq/minimal_grasp.git 
+git clone https://github.com/zlwq/most_minimal_grasp.git 
 ```
 进入工作空间，然后编译：
 ```bash
