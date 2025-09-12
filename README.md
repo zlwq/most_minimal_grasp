@@ -2,14 +2,7 @@
 
 本项目旨在提供一个尽可能简化的 Franka Panda 抓取环境，方便快速复现 **ROS + Gazebo + MoveIt** 下的抓取实验。
  
-<h1><p align="center"><b><big>开发者宣言</big></b></p></h1>
  
-<h1><div style="text-align: center;" > 
-<p align="center">我去除了大部分bug的腥味</p>
-<p align="center">但我保留了一部分</p>
-<p align="center">就是为了让初学者意识到你面对的是ROS</p>
-<p align="center">而不是你上幼儿园时算的加法题</p>
-</div></h1>
 
 
 
